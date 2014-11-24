@@ -1,5 +1,7 @@
+OpenStack Rally Scenario templates
+==================================
+
 Scenario templates for OpenStack Rally to run test scenarios against OpenStack clouds
-=====================================================================================
 
 Expand m4 macros before using the scenario files
 ------------------------------------------------
