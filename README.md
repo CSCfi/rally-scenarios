@@ -6,15 +6,12 @@ Scenario templates for OpenStack Rally to run test scenarios against OpenStack c
 Expand m4 macros before using the scenario files
 ------------------------------------------------
 
-```bash
-AUTH_URL=https://API-HOST-NAME:5001/v2.0
-RALLYTENANT=RALLY-TENANT-NAME
-RALLYUSER=RALLY-USER-NAME
-RALLYPASSWORD=RALLY-USER-PASSWORD
 
+```bash
+source rally-openrc.sh
 for file in $(ls -1 *.m4); do
-m4 -D AUTH_URL=$AUTH_URL -D RALLYTENANT=$RALLYTENANT -D RALLYUSER=$RALLYUSER \
--D RALLYPASSWORD=$RALLYPASSWORD ${file} > ${file%.*}.json
+m4 -D AUTH_URL=$OS_AUTH_URL -D RALLYTENANT=$OS_TENANT_NAME \
+-D RALLYUSER=$OS_USERNAME -D RALLYPASSWORD=$OS_PASSWORD ${file} > ${file%.*}.json
 done
 ```
 
