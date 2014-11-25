@@ -9,10 +9,7 @@ Expand m4 macros before using the scenario files
 
 ```bash
 source rally-openrc.sh
-for file in $(ls -1 *.m4); do
-m4 -D AUTH_URL=$OS_AUTH_URL -D RALLYTENANT=$OS_TENANT_NAME \
--D RALLYUSER=$OS_USERNAME -D RALLYPASSWORD=$OS_PASSWORD ${file} > ${file%.*}.json
-done
+./expand_macros.sh
 ```
 
 Setup Rally environment
