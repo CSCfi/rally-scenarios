@@ -36,6 +36,8 @@ rally deployment check
 Run Rally scenarios
 -------------------
 
+Call 'initrally' to activate rally environment before calling tests
+
 |  Test                 | Command                                              |
 |-----------------------|------------------------------------------------------|
 | Test authentication   | `rally task start --task authenticate.json`          |
