@@ -23,6 +23,7 @@ Setup Rally environment
 
 ```bash
 git clone git@github.com:CSC-IT-Center-for-Science/rally.git
+git clone git@github.com:CSC-IT-Center-for-Science/rally-scenarios.git
 cd rally
 git checkout pre_create
 sudo ./install_rally.sh -v
