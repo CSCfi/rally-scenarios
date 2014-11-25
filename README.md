@@ -33,9 +33,15 @@ rally deployment create --filename=rally-user.json --name=rally-deployment
 rally deployment check 
 ```
 
-Run Rally scenario
-------------------
+Run Rally scenarios
+-------------------
 
-```bash
-rally task start --task create-attach-volume.json
-```
+|  Test                 | Command                                              |
+|-----------------------|------------------------------------------------------|
+| Test authentication   | `rally task start --task authenticate.json`          |
+| VM creation           | `rally task start --task boot-and-delete.json`       |
+| Volume creation       | `rally task start --task create-attach-volume.json`  |
+| Image creation        | `rally task start --task create-delete-image.json`   |
+| Network creation      | `rally task start --task create-delete-network.json` |
+| Network Port creation | `rally task start --task create-delete-port.json`    |
+| Subnet creation       | `rally task start --task create-delete-subnet.json`  |
